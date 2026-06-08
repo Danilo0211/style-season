@@ -114,6 +114,8 @@
 			const banner = document.querySelector("header > h2");
 			const logo = document.getElementById("logo");
 			const wear = document.getElementById("wear");
+			//moved higher due to default
+			wear.src = "images/" + season + "-wear.jpg";
 
 			switch(season) {
 				case "spring": 
@@ -138,15 +140,13 @@
 
 				default:
 					html.style.backgroundColor ="#ccc";
-					banner.textContent = "Back to the original page";
-					Image.src = "images/300x40.png" + season + ".png";
-					
+					banner.textContent = "Outfitter for All Seasons!";
+				season = "four-seasons";
+					// images/300x400.png
+					wear.src = "images/300X400.png";					
 				break;			   
-			}
-		
-			logo.src = "images/" + season + ".gif";
-			wear.src = "images/" + season + "-wear.jpg";
-			
+			}		
+			logo.src = "images/" + season + ".gif";				
 			
 
 		    // 4. Now you can use that 'season' variable to change pics/colors
